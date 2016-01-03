@@ -1,0 +1,30 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <context-param>
+        <param-name>albumName</param-name>
+        <param-value>The name of the album</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>albumRootPath</param-name>
+        <param-value>/path/to/images</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>cacheRootPath</param-name>
+        <param-value>/path/to/tmp/image/cache</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>coverImage</param-name>
+        <param-value>byNameAsc</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>imageQuality</param-name>
+        <param-value>0.90</param-value>
+    </context-param>
+
+</web-app>

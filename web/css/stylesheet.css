@@ -1,0 +1,185 @@
+/*****************************************************************************/
+/*** General                                                               ***/
+/*****************************************************************************/
+body {
+    margin: 0;
+}
+
+/*****************************************************************************/
+/*** Album                                                                 ***/
+/*****************************************************************************/
+.album .album-name {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    color: #000000;
+
+    padding: 1.2% 1.66%;
+
+    background-color: #eeeeee;
+
+    border-bottom: 1px solid #dadada;
+}
+
+.album .album-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*****************************************************************************/
+/*** Breadcrumbs                                                           ***/
+/*****************************************************************************/
+.breadcrumb {
+    background-color: #f5f5f5;
+    padding: 0.5% 1.66%;
+    font-family: 'Open Sans', serif;
+    font-size: 1.2rem;
+}
+
+.breadcrumb .spacer {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.breadcrumb .fragment a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumb .fragment a:hover {
+    text-decoration: underline;
+}
+
+/*****************************************************************************/
+/*** Folders and Images                                                    ***/
+/*****************************************************************************/
+.folder-item, .image-item  {
+    margin: 1.1%;
+    cursor: pointer;
+}
+
+/*****************************************************************************/
+/*** Folder                                                                ***/
+/*****************************************************************************/
+.folder-item {
+    display: flex;
+    flex-direction: column-reverse;
+
+    height: 14vw;
+    width: 14vw;
+
+    background: no-repeat center center;
+    background-size: cover;
+
+    transition-duration: 0.2s;
+    box-shadow: 3px 3px 3px #aaa;
+}
+
+.folder-item:hover {
+    transition-duration: 0.2s;
+    box-shadow: 3px 3px 3px #888;
+}
+
+.folder-item .folder-text {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 3% 5%;
+    transition-duration: 0.2s;
+}
+
+.folder-item:hover .folder-text {
+    background: rgba(255, 255, 255, 0.85);
+    transition-duration: 0.2s;
+}
+
+.folder-item .folder-text .folder-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 0.2em;
+}
+
+.folder-item .folder-text .folder-date {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: #333333;
+}
+
+.folder-item:hover .folder-text .folder-name {
+    text-decoration: underline;
+}
+
+/*****************************************************************************/
+/*** Image                                                                 ***/
+/*****************************************************************************/
+.image-item {
+    position: relative;
+
+    width: 14vw;
+    height: 14vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-item .image {
+    width: 12.5vw;
+    height: 12.5vw;
+
+    object-fit: cover;
+    transition-duration: 0.2s;
+}
+
+.image-item:hover .image {
+    width: 14vw;
+    height: 14vw;
+    transition-duration: 0.2s;
+}
+
+/*****************************************************************************/
+/*** Lightbox                                                              ***/
+/*****************************************************************************/
+.lightbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    background-color: #1d1d1d;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.lightbox .lightbox-prev, .lightbox .lightbox-next {
+    display: flex;
+    align-items: center;
+    width: 5em;
+    height: 100vh;
+    color: lightgrey;
+    cursor: pointer;
+}
+
+.lightbox .lightbox-prev:hover, .lightbox .lightbox-next:hover {
+    background-color: #161616;
+    color: white;
+}
+
+.lightbox .left-arrow, .lightbox .right-arrow {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lightbox .lightbox-container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.lightbox .lightbox-container img {
+    max-width: 80vw;
+    max-height: 90vh;
+
+    margin: auto;
+
+    border: 3px solid lightgray;
+}
