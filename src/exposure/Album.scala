@@ -48,9 +48,12 @@ case class Album(name: String, items: Map[String, AlbumItem], timestamp: Long) {
         // the thumbnail file.
         val thumbnail = image.thumbnails((w, h))
 
+        // use the highest quality if the thumbnail is small.
+        val quality = if (w * h <= 400 * 400) 1.0 else imageQuality
+
         // check if the thumbnail exists, otherwise create it.
         if (!thumbnail.exists) {
-          resizeImage(image.path, thumbnail, w, h, imageQuality)
+          resizeImage(image.path, thumbnail, w, h, quality)
         }
 
         Some(thumbnail)
