@@ -208,7 +208,7 @@ var App = React.createClass({
     preload: function (image) {
         var width = window.screen.width;
         var height = window.screen.height;
-        var url = image.url + "&w=" + width + "&h=" + height;
+        var url = image.url + "?w=" + width + "&h=" + height;
         var img = new Image();
         img.src = url;
     },
@@ -342,7 +342,7 @@ var Folder = React.createClass({
     render: function () {
         var width = Math.round(0.15 * window.screen.width);
         var height = Math.round(0.15 * window.screen.height);
-        var url = this.props.url + "&w=" + width + "&h=" + height;
+        var url = this.props.url + "?w=" + width + "&h=" + height;
 
         var style = {
             "backgroundImage": "url('" + url + "')"
@@ -374,7 +374,7 @@ var Image = React.createClass({
     render: function () {
         var width = Math.round(0.15 * window.screen.width);
         var height = Math.round(0.15 * window.screen.height);
-        var url = this.props.url + "&w=" + width + "&h=" + height;
+        var url = this.props.url + "?w=" + width + "&h=" + height;
 
         return (
             <div className="image-item" onClick={() => this.props.clickImage(this.props.name)}>
@@ -441,7 +441,7 @@ var Lightbox = React.createClass({
     render: function () {
         var width = window.screen.width;
         var height = window.screen.height;
-        var url = this.props.url + "&w=" + width + "&h=" + height;
+        var url = this.props.url + "?w=" + width + "&h=" + height;
 
         return (
             <div className="lightbox">

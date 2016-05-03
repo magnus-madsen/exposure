@@ -1,0 +1,8 @@
+<urlrewrite>
+
+    <rule match-type="wildcard">
+        <from>/img/**</from>
+        <to>/i/?path=/$1</to>
+    </rule>
+
+</urlrewrite>
