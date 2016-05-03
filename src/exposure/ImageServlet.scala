@@ -75,9 +75,6 @@ class ImageServlet extends HttpServlet {
             val oneMonth = 1000 * 60 * 60 * 24 * 31
             res.setDateHeader("Expires", System.currentTimeMillis() + oneMonth)
 
-            val etag = math.abs(image.path.toString.hashCode())
-            res.setIntHeader("ETag", etag)
-
             // write the response
             for {
               in <- new BufferedInputStream(image.newInputStream).autoClosed

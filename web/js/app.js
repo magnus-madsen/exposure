@@ -209,7 +209,11 @@ var App = React.createClass({displayName: "App",
         var width = window.screen.width;
         var height = window.screen.height;
         var url = image.url + "?w=" + width + "&h=" + height;
-        var img = new Image();
+        var img = new Image(width, height);
+        console.log("Preloading: '" + url + "'.");
+        img.onload = () => {
+            console.log("Image: '" + url + "' preloaded.")
+        };
         img.src = url;
     },
 
