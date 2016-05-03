@@ -72,7 +72,7 @@ class ImageServlet extends HttpServlet {
             // content type
             res.addHeader("Content-Type", "image/jpeg")
             // cache control and expiration
-            val oneMonth = 1000 * 60 * 60 * 24 * 31
+            val oneMonth: Long = 1000L * 60L * 60L * 24L * 31L
             res.setDateHeader("Expires", System.currentTimeMillis() + oneMonth)
 
             // write the response
