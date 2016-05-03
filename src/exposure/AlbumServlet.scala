@@ -89,7 +89,7 @@ class AlbumServlet extends HttpServlet {
           "name" -> JString(f.path.name),
           "path" -> JString(f.virtualPath),
           "time" -> JInt(f.path.lastModifiedTime.getEpochSecond),
-          "url" -> JString("img" + f.coverImage.virtualPath)
+          "url" -> JString(f.coverImage.virtualPath)
         )
     })
 
@@ -101,7 +101,7 @@ class AlbumServlet extends HttpServlet {
       case i =>
         JObject(
           "name" -> JString(i.path.name),
-          "url" -> JString("img" + i.virtualPath)
+          "url" -> JString(i.virtualPath)
         )
     })
 

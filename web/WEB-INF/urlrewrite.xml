@@ -1,8 +1,8 @@
 <urlrewrite>
 
-    <rule match-type="wildcard">
-        <from>/img/**</from>
-        <to>/i/?path=/$1</to>
+    <rule>
+        <from>/img/([0-9]+)x([0-9]+)/([.\/]*)</from>
+        <to>/i/?w=$1&amp;h=$2&amp;path=/$3</to>
     </rule>
 
 </urlrewrite>
